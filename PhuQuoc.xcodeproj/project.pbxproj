@@ -217,7 +217,7 @@
 				E361642F2A3F130600BA9C24 /* GoogleService-Info.plist */,
 				E348667F2A2292B70052AE15 /* Resources */,
 				E348667E2A2292A70052AE15 /* Models */,
-				E348667D2A2292990052AE15 /* Manager */,
+				E348667D2A2292990052AE15 /* Managers */,
 				E348667C2A2292870052AE15 /* Extensions */,
 				E348667B2A22927A0052AE15 /* Core */,
 			);
@@ -262,7 +262,7 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		E348667D2A2292990052AE15 /* Manager */ = {
+		E348667D2A2292990052AE15 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
 				E34866712A2292520052AE15 /* Persistence.swift */,
@@ -270,7 +270,7 @@
 				E3DDA89A2A41F81200C577D1 /* NavigationManager.swift */,
 				E39968022A4D82C400343B59 /* NetworkManager.swift */,
 			);
-			name = Manager;
+			name = Managers;
 			path = "New Group";
 			sourceTree = "<group>";
 		};
