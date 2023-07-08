@@ -61,7 +61,7 @@ extension HomeView {
                     }
                 }
                 Spacer()
-                NavigationLink(destination: ProfileView()){
+                NavigationLink(destination: UserView()){
                     Image("ava")
                         .resizable()
                         .frame(width: 65.0, height: 65.0)

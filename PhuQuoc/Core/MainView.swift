@@ -28,7 +28,7 @@ struct MainView: View {
                         EventsView()
                             .tag(2)
                             .ignoresSafeArea()
-                        ProfileView()
+                        UserView()
                             .tag(3)
                             .ignoresSafeArea()
                     }

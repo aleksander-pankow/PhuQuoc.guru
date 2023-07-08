@@ -1,5 +1,5 @@
 //
-//  ProfileView.swift
+//  UserView.swift
 //  PhuQuoc
 //
 //  Created by Aleksander Pankow on 10/06/2023.
@@ -8,7 +8,7 @@
 import SwiftUI
 import FirebaseAuth
 
-struct ProfileView: View {
+struct UserView: View {
     
     @StateObject private var authViewModel = AuthViewModel()
     
@@ -22,15 +22,15 @@ struct ProfileView: View {
     }
 }
 
-struct ProfileView_Previews: PreviewProvider {
+struct UserView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
+        UserView()
     }
 }
 
 //MARK: - VIEW COMPONENTS
 
-extension ProfileView {
+extension UserView {
     private var header: some View{
         Group{
             AsyncImage(url: URL(string: "https://picsum.photos/300")) { phase in
