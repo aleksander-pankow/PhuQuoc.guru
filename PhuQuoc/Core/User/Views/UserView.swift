@@ -54,12 +54,13 @@ extension UserView {
                 .font(.body)
                 .fontWeight(.regular)
                 .foregroundColor(Color.gray)
-            
-            Text("Edit profile")
-                .padding()
-                .foregroundColor(.white)
-                .background(Color("primaryBlue"))
-                .cornerRadius(15)
+            NavigationLink(destination: UserEditView()){
+                Text("Edit profile")
+                    .padding()
+                    .foregroundColor(.white)
+                    .background(Color("primaryBlue"))
+                    .cornerRadius(15)
+            }
         }
     }
     private var menu: some View{
