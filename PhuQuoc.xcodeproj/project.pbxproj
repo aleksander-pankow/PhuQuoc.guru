@@ -7,15 +7,60 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E30A72652A3F0F4300E85524 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = E30A72642A3F0F4300E85524 /* FirebaseAuth */; };
+		E30A72672A3F0F4300E85524 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = E30A72662A3F0F4300E85524 /* FirebaseAuthCombine-Community */; };
+		E30A72692A3F0F4300E85524 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E30A72682A3F0F4300E85524 /* FirebaseFirestore */; };
+		E30A726B2A3F0F4300E85524 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = E30A726A2A3F0F4300E85524 /* FirebaseFirestoreCombine-Community */; };
+		E30A726D2A3F0F4300E85524 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E30A726C2A3F0F4300E85524 /* FirebaseFirestoreSwift */; };
+		E30A726F2A3F0F4300E85524 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = E30A726E2A3F0F4300E85524 /* FirebaseMessaging */; };
+		E32CFE872A48BC5200A30B54 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32CFE862A48BC5200A30B54 /* WelcomeView.swift */; };
+		E32CFE8A2A48D4F700A30B54 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32CFE892A48D4F700A30B54 /* AuthView.swift */; };
+		E32CFE8C2A48DC9900A30B54 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32CFE8B2A48DC9900A30B54 /* AuthViewModel.swift */; };
+		E32CFE8E2A48DDE600A30B54 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32CFE8D2A48DDE600A30B54 /* MainView.swift */; };
+		E32CFE942A4C6A6D00A30B54 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32CFE932A4C6A6D00A30B54 /* CardView.swift */; };
 		E34866692A22924F0052AE15 /* PhuQuocApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34866682A22924F0052AE15 /* PhuQuocApp.swift */; };
 		E348666B2A22924F0052AE15 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E348666A2A22924F0052AE15 /* ContentView.swift */; };
 		E348666D2A2292520052AE15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E348666C2A2292520052AE15 /* Assets.xcassets */; };
 		E34866702A2292520052AE15 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E348666F2A2292520052AE15 /* Preview Assets.xcassets */; };
 		E34866722A2292520052AE15 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34866712A2292520052AE15 /* Persistence.swift */; };
 		E34866752A2292520052AE15 /* PhuQuoc.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E34866732A2292520052AE15 /* PhuQuoc.xcdatamodeld */; };
+		E34866842A2294720052AE15 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34866832A2294720052AE15 /* HomeView.swift */; };
+		E34866872A2394110052AE15 /* Extension+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34866862A2394110052AE15 /* Extension+Keyboard.swift */; };
+		E34866892A23A1DC0052AE15 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34866882A23A1DC0052AE15 /* Category.swift */; };
+		E35C10F72A36376F009B4944 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35C10F62A36376F009B4944 /* BlurView.swift */; };
+		E35C10FA2A364506009B4944 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = E35C10F92A364506009B4944 /* SwiftUIX */; };
+		E36164302A3F130600BA9C24 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E361642F2A3F130600BA9C24 /* GoogleService-Info.plist */; };
+		E385CEC42A4079D4009DAEAC /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E385CEC32A4079D4009DAEAC /* LocationManager.swift */; };
+		E385CEC62A407CEB009DAEAC /* Extension+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = E385CEC52A407CEB009DAEAC /* Extension+Location.swift */; };
+		E395C50D2A34E72D00EDBA7D /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E395C50C2A34E72D00EDBA7D /* Extension+String.swift */; };
+		E395C5102A35158700EDBA7D /* PlaceCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E395C50F2A35158700EDBA7D /* PlaceCardView.swift */; };
+		E395C5122A3526AB00EDBA7D /* Extension+Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = E395C5112A3526AB00EDBA7D /* Extension+Blur.swift */; };
+		E3994D642A33C8E600D3A98B /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3994D632A33C8E600D3A98B /* TabBarView.swift */; };
+		E3994D662A33CBAB00D3A98B /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3994D652A33CBAB00D3A98B /* TabBarItem.swift */; };
+		E3994D6C2A33DBB200D3A98B /* ListingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3994D6B2A33DBB200D3A98B /* ListingsView.swift */; };
+		E3994D6E2A33DBD500D3A98B /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3994D6D2A33DBD500D3A98B /* EventsView.swift */; };
+		E3994D702A33DBEC00D3A98B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3994D6F2A33DBEC00D3A98B /* ProfileView.swift */; };
+		E3994D722A3498B100D3A98B /* Extension+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3994D712A3498B100D3A98B /* Extension+Color.swift */; };
+		E39968032A4D82C400343B59 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39968022A4D82C400343B59 /* NetworkManager.swift */; };
+		E39968052A4DA23E00343B59 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39968042A4DA23E00343B59 /* UserViewModel.swift */; };
+		E39968072A4DA2D500343B59 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39968062A4DA2D500343B59 /* User.swift */; };
+		E3D4BC3B2A23C0FB00E40D48 /* ListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D4BC3A2A23C0FB00E40D48 /* ListingViewModel.swift */; };
+		E3D4BC3E2A24BCA300E40D48 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E3D4BC3D2A24BCA300E40D48 /* Alamofire */; };
+		E3D4BC412A24BCB100E40D48 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = E3D4BC402A24BCB100E40D48 /* SwiftyJSON */; };
+		E3D4BC432A24E3E700E40D48 /* Listing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D4BC422A24E3E700E40D48 /* Listing.swift */; };
+		E3DDA8992A41F33500C577D1 /* PlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DDA8982A41F33500C577D1 /* PlaceView.swift */; };
+		E3DDA89B2A41F81200C577D1 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DDA89A2A41F81200C577D1 /* NavigationManager.swift */; };
+		E3DDA89D2A421C1F00C577D1 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DDA89C2A421C1F00C577D1 /* MapView.swift */; };
+		E3E19B4D2A45ACF00061B0FC /* ImageSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E19B4C2A45ACF00061B0FC /* ImageSlider.swift */; };
+		E3EBE1172A4349D5002B2A35 /* Extension+Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EBE1162A4349D5002B2A35 /* Extension+Text.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E32CFE862A48BC5200A30B54 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		E32CFE892A48D4F700A30B54 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		E32CFE8B2A48DC9900A30B54 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		E32CFE8D2A48DDE600A30B54 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		E32CFE932A4C6A6D00A30B54 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		E34866652A22924F0052AE15 /* PhuQuoc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhuQuoc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E34866682A22924F0052AE15 /* PhuQuocApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhuQuocApp.swift; sourceTree = "<group>"; };
 		E348666A2A22924F0052AE15 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -23,6 +68,33 @@
 		E348666F2A2292520052AE15 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E34866712A2292520052AE15 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		E34866742A2292520052AE15 /* PhuQuoc.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PhuQuoc.xcdatamodel; sourceTree = "<group>"; };
+		E34866832A2294720052AE15 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E34866852A23916D0052AE15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E34866862A2394110052AE15 /* Extension+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Keyboard.swift"; sourceTree = "<group>"; };
+		E34866882A23A1DC0052AE15 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		E35C10F62A36376F009B4944 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		E361642F2A3F130600BA9C24 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E385CEC32A4079D4009DAEAC /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		E385CEC52A407CEB009DAEAC /* Extension+Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Location.swift"; sourceTree = "<group>"; };
+		E395C50C2A34E72D00EDBA7D /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
+		E395C50F2A35158700EDBA7D /* PlaceCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCardView.swift; sourceTree = "<group>"; };
+		E395C5112A3526AB00EDBA7D /* Extension+Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Blur.swift"; sourceTree = "<group>"; };
+		E3994D632A33C8E600D3A98B /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		E3994D652A33CBAB00D3A98B /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		E3994D6B2A33DBB200D3A98B /* ListingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsView.swift; sourceTree = "<group>"; };
+		E3994D6D2A33DBD500D3A98B /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
+		E3994D6F2A33DBEC00D3A98B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		E3994D712A3498B100D3A98B /* Extension+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Color.swift"; sourceTree = "<group>"; };
+		E39968022A4D82C400343B59 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		E39968042A4DA23E00343B59 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		E39968062A4DA2D500343B59 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E3D4BC3A2A23C0FB00E40D48 /* ListingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingViewModel.swift; sourceTree = "<group>"; };
+		E3D4BC422A24E3E700E40D48 /* Listing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listing.swift; sourceTree = "<group>"; };
+		E3DDA8982A41F33500C577D1 /* PlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceView.swift; sourceTree = "<group>"; };
+		E3DDA89A2A41F81200C577D1 /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
+		E3DDA89C2A421C1F00C577D1 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		E3E19B4C2A45ACF00061B0FC /* ImageSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSlider.swift; sourceTree = "<group>"; };
+		E3EBE1162A4349D5002B2A35 /* Extension+Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Text.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,12 +102,98 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E30A726F2A3F0F4300E85524 /* FirebaseMessaging in Frameworks */,
+				E35C10FA2A364506009B4944 /* SwiftUIX in Frameworks */,
+				E3D4BC412A24BCB100E40D48 /* SwiftyJSON in Frameworks */,
+				E3D4BC3E2A24BCA300E40D48 /* Alamofire in Frameworks */,
+				E30A72652A3F0F4300E85524 /* FirebaseAuth in Frameworks */,
+				E30A72672A3F0F4300E85524 /* FirebaseAuthCombine-Community in Frameworks */,
+				E30A72692A3F0F4300E85524 /* FirebaseFirestore in Frameworks */,
+				E30A726B2A3F0F4300E85524 /* FirebaseFirestoreCombine-Community in Frameworks */,
+				E30A726D2A3F0F4300E85524 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E32CFE822A48BBF000A30B54 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				E3994D6D2A33DBD500D3A98B /* EventsView.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		E32CFE832A48BBFB00A30B54 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				E32CFE882A48D4D300A30B54 /* Auth */,
+				E3994D6F2A33DBEC00D3A98B /* ProfileView.swift */,
+				E39968042A4DA23E00343B59 /* UserViewModel.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		E32CFE842A48BC1700A30B54 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				E3DDA89C2A421C1F00C577D1 /* MapView.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		E32CFE852A48BC2300A30B54 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				E32CFE862A48BC5200A30B54 /* WelcomeView.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		E32CFE882A48D4D300A30B54 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				E32CFE8B2A48DC9900A30B54 /* AuthViewModel.swift */,
+				E32CFE892A48D4F700A30B54 /* AuthView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		E32CFE8F2A4C4FBA00A30B54 /* ImageSlider */ = {
+			isa = PBXGroup;
+			children = (
+				E3E19B4C2A45ACF00061B0FC /* ImageSlider.swift */,
+			);
+			path = ImageSlider;
+			sourceTree = "<group>";
+		};
+		E32CFE902A4C506600A30B54 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E3DDA8972A41F31D00C577D1 /* Place */,
+				E3994D6B2A33DBB200D3A98B /* ListingsView.swift */,
+				E35C10F62A36376F009B4944 /* BlurView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E32CFE912A4C6A3800A30B54 /* Blur Card */ = {
+			isa = PBXGroup;
+			children = (
+				E395C50F2A35158700EDBA7D /* PlaceCardView.swift */,
+			);
+			path = "Blur Card";
+			sourceTree = "<group>";
+		};
+		E32CFE922A4C6A4800A30B54 /* Normal Card */ = {
+			isa = PBXGroup;
+			children = (
+				E32CFE932A4C6A6D00A30B54 /* CardView.swift */,
+			);
+			path = "Normal Card";
+			sourceTree = "<group>";
+		};
 		E348665C2A22924F0052AE15 = {
 			isa = PBXGroup;
 			children = (
@@ -55,12 +213,13 @@
 		E34866672A22924F0052AE15 /* PhuQuoc */ = {
 			isa = PBXGroup;
 			children = (
-				E34866682A22924F0052AE15 /* PhuQuocApp.swift */,
-				E348666A2A22924F0052AE15 /* ContentView.swift */,
-				E348666C2A2292520052AE15 /* Assets.xcassets */,
-				E34866712A2292520052AE15 /* Persistence.swift */,
-				E34866732A2292520052AE15 /* PhuQuoc.xcdatamodeld */,
-				E348666E2A2292520052AE15 /* Preview Content */,
+				E34866852A23916D0052AE15 /* Info.plist */,
+				E361642F2A3F130600BA9C24 /* GoogleService-Info.plist */,
+				E348667F2A2292B70052AE15 /* Resources */,
+				E348667E2A2292A70052AE15 /* Models */,
+				E348667D2A2292990052AE15 /* Managers */,
+				E348667C2A2292870052AE15 /* Extensions */,
+				E348667B2A22927A0052AE15 /* Core */,
 			);
 			path = PhuQuoc;
 			sourceTree = "<group>";
@@ -71,6 +230,121 @@
 				E348666F2A2292520052AE15 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E348667B2A22927A0052AE15 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E395C50E2A35155600EDBA7D /* Listings */,
+				E32CFE822A48BBF000A30B54 /* Events */,
+				E32CFE832A48BBFB00A30B54 /* User */,
+				E32CFE842A48BC1700A30B54 /* Map */,
+				E34866822A2293A40052AE15 /* Home */,
+				E32CFE852A48BC2300A30B54 /* Welcome */,
+				E3E19B4B2A45ACD60061B0FC /* Components */,
+				E34866682A22924F0052AE15 /* PhuQuocApp.swift */,
+				E348666A2A22924F0052AE15 /* ContentView.swift */,
+				E32CFE8D2A48DDE600A30B54 /* MainView.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		E348667C2A2292870052AE15 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E395C5112A3526AB00EDBA7D /* Extension+Blur.swift */,
+				E34866862A2394110052AE15 /* Extension+Keyboard.swift */,
+				E3994D712A3498B100D3A98B /* Extension+Color.swift */,
+				E395C50C2A34E72D00EDBA7D /* Extension+String.swift */,
+				E385CEC52A407CEB009DAEAC /* Extension+Location.swift */,
+				E3EBE1162A4349D5002B2A35 /* Extension+Text.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E348667D2A2292990052AE15 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				E34866712A2292520052AE15 /* Persistence.swift */,
+				E385CEC32A4079D4009DAEAC /* LocationManager.swift */,
+				E3DDA89A2A41F81200C577D1 /* NavigationManager.swift */,
+				E39968022A4D82C400343B59 /* NetworkManager.swift */,
+			);
+			name = Managers;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		E348667E2A2292A70052AE15 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E34866882A23A1DC0052AE15 /* Category.swift */,
+				E3D4BC422A24E3E700E40D48 /* Listing.swift */,
+				E39968062A4DA2D500343B59 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E348667F2A2292B70052AE15 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E348666E2A2292520052AE15 /* Preview Content */,
+				E34866732A2292520052AE15 /* PhuQuoc.xcdatamodeld */,
+				E348666C2A2292520052AE15 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E34866822A2293A40052AE15 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E34866832A2294720052AE15 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E395C50E2A35155600EDBA7D /* Listings */ = {
+			isa = PBXGroup;
+			children = (
+				E3D4BC3A2A23C0FB00E40D48 /* ListingViewModel.swift */,
+				E32CFE902A4C506600A30B54 /* Views */,
+			);
+			path = Listings;
+			sourceTree = "<group>";
+		};
+		E3994D672A33CBC400D3A98B /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				E3994D632A33C8E600D3A98B /* TabBarView.swift */,
+				E3994D652A33CBAB00D3A98B /* TabBarItem.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		E3DDA8962A41DDED00C577D1 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				E32CFE922A4C6A4800A30B54 /* Normal Card */,
+				E32CFE912A4C6A3800A30B54 /* Blur Card */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		E3DDA8972A41F31D00C577D1 /* Place */ = {
+			isa = PBXGroup;
+			children = (
+				E3DDA8962A41DDED00C577D1 /* Card */,
+				E3DDA8982A41F33500C577D1 /* PlaceView.swift */,
+			);
+			path = Place;
+			sourceTree = "<group>";
+		};
+		E3E19B4B2A45ACD60061B0FC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E3994D672A33CBC400D3A98B /* TabBar */,
+				E32CFE8F2A4C4FBA00A30B54 /* ImageSlider */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,6 +363,17 @@
 			dependencies = (
 			);
 			name = PhuQuoc;
+			packageProductDependencies = (
+				E3D4BC3D2A24BCA300E40D48 /* Alamofire */,
+				E3D4BC402A24BCB100E40D48 /* SwiftyJSON */,
+				E35C10F92A364506009B4944 /* SwiftUIX */,
+				E30A72642A3F0F4300E85524 /* FirebaseAuth */,
+				E30A72662A3F0F4300E85524 /* FirebaseAuthCombine-Community */,
+				E30A72682A3F0F4300E85524 /* FirebaseFirestore */,
+				E30A726A2A3F0F4300E85524 /* FirebaseFirestoreCombine-Community */,
+				E30A726C2A3F0F4300E85524 /* FirebaseFirestoreSwift */,
+				E30A726E2A3F0F4300E85524 /* FirebaseMessaging */,
+			);
 			productName = PhuQuoc;
 			productReference = E34866652A22924F0052AE15 /* PhuQuoc.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +402,12 @@
 				Base,
 			);
 			mainGroup = E348665C2A22924F0052AE15;
+			packageReferences = (
+				E3D4BC3C2A24BCA300E40D48 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				E3D4BC3F2A24BCB100E40D48 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				E35C10F82A364506009B4944 /* XCRemoteSwiftPackageReference "SwiftUIX" */,
+				E30A72632A3F0F4300E85524 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = E34866662A22924F0052AE15 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -133,6 +424,7 @@
 			files = (
 				E34866702A2292520052AE15 /* Preview Assets.xcassets in Resources */,
 				E348666D2A2292520052AE15 /* Assets.xcassets in Resources */,
+				E36164302A3F130600BA9C24 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,9 +436,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				E34866722A2292520052AE15 /* Persistence.swift in Sources */,
+				E39968052A4DA23E00343B59 /* UserViewModel.swift in Sources */,
+				E3994D642A33C8E600D3A98B /* TabBarView.swift in Sources */,
+				E3994D6E2A33DBD500D3A98B /* EventsView.swift in Sources */,
 				E34866752A2292520052AE15 /* PhuQuoc.xcdatamodeld in Sources */,
+				E3DDA89B2A41F81200C577D1 /* NavigationManager.swift in Sources */,
+				E3D4BC432A24E3E700E40D48 /* Listing.swift in Sources */,
 				E348666B2A22924F0052AE15 /* ContentView.swift in Sources */,
+				E32CFE8E2A48DDE600A30B54 /* MainView.swift in Sources */,
+				E3994D702A33DBEC00D3A98B /* ProfileView.swift in Sources */,
+				E32CFE942A4C6A6D00A30B54 /* CardView.swift in Sources */,
+				E395C5102A35158700EDBA7D /* PlaceCardView.swift in Sources */,
+				E3EBE1172A4349D5002B2A35 /* Extension+Text.swift in Sources */,
+				E395C50D2A34E72D00EDBA7D /* Extension+String.swift in Sources */,
+				E3994D662A33CBAB00D3A98B /* TabBarItem.swift in Sources */,
+				E32CFE872A48BC5200A30B54 /* WelcomeView.swift in Sources */,
+				E3994D6C2A33DBB200D3A98B /* ListingsView.swift in Sources */,
+				E34866842A2294720052AE15 /* HomeView.swift in Sources */,
+				E385CEC42A4079D4009DAEAC /* LocationManager.swift in Sources */,
+				E32CFE8A2A48D4F700A30B54 /* AuthView.swift in Sources */,
+				E3994D722A3498B100D3A98B /* Extension+Color.swift in Sources */,
+				E39968032A4D82C400343B59 /* NetworkManager.swift in Sources */,
+				E3DDA89D2A421C1F00C577D1 /* MapView.swift in Sources */,
+				E34866872A2394110052AE15 /* Extension+Keyboard.swift in Sources */,
+				E39968072A4DA2D500343B59 /* User.swift in Sources */,
 				E34866692A22924F0052AE15 /* PhuQuocApp.swift in Sources */,
+				E3DDA8992A41F33500C577D1 /* PlaceView.swift in Sources */,
+				E3E19B4D2A45ACF00061B0FC /* ImageSlider.swift in Sources */,
+				E3D4BC3B2A23C0FB00E40D48 /* ListingViewModel.swift in Sources */,
+				E32CFE8C2A48DC9900A30B54 /* AuthViewModel.swift in Sources */,
+				E35C10F72A36376F009B4944 /* BlurView.swift in Sources */,
+				E385CEC62A407CEB009DAEAC /* Extension+Location.swift in Sources */,
+				E395C5122A3526AB00EDBA7D /* Extension+Blur.swift in Sources */,
+				E34866892A23A1DC0052AE15 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,15 +596,19 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"PhuQuoc/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"PhuQuoc/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = HM37P8L339;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PhuQuoc/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,15 +629,19 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"PhuQuoc/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"PhuQuoc/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = HM37P8L339;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PhuQuoc/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -347,6 +677,89 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E30A72632A3F0F4300E85524 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+		E35C10F82A364506009B4944 /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.5;
+			};
+		};
+		E3D4BC3C2A24BCA300E40D48 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		E3D4BC3F2A24BCB100E40D48 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E30A72642A3F0F4300E85524 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E30A72632A3F0F4300E85524 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		E30A72662A3F0F4300E85524 /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E30A72632A3F0F4300E85524 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
+		};
+		E30A72682A3F0F4300E85524 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E30A72632A3F0F4300E85524 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		E30A726A2A3F0F4300E85524 /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E30A72632A3F0F4300E85524 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		E30A726C2A3F0F4300E85524 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E30A72632A3F0F4300E85524 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		E30A726E2A3F0F4300E85524 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E30A72632A3F0F4300E85524 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		E35C10F92A364506009B4944 /* SwiftUIX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E35C10F82A364506009B4944 /* XCRemoteSwiftPackageReference "SwiftUIX" */;
+			productName = SwiftUIX;
+		};
+		E3D4BC3D2A24BCA300E40D48 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E3D4BC3C2A24BCA300E40D48 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		E3D4BC402A24BCB100E40D48 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E3D4BC3F2A24BCB100E40D48 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		E34866732A2292520052AE15 /* PhuQuoc.xcdatamodeld */ = {
