@@ -14,6 +14,7 @@ struct HomeView: View {
     @State private var searchText = ""
     @State private var showingSheet = false
     @State private var activeIndex = 0
+    @State private var isPresented = true
     
     let activityCategories: [String] = ["🏖️Beaches", "🦐Food", "🤿Snorkeling", "🏞️Parks", "🛥️Activity", "🏺Culture", "🎣Fishing", "🛒Markets", "🎡Hopping"]
     
@@ -27,6 +28,11 @@ struct HomeView: View {
         .padding()
         .onTapGesture {
             self.hideKeyboard()
+        }
+        .popup(isPresented: $isPresented) {
+            BottomPopupView {
+                UserProfileStartView(isPresented: $isPresented)
+            }
         }
     }
     
@@ -53,7 +59,7 @@ extension HomeView {
                             Image("navigation")
                                 .resizable()
                                 .renderingMode(.template)
-                                .foregroundColor(Color("primaryBlue"))
+                                .foregroundColor(Color("PrimaryBlue"))
                                 .frame(width: 20.0, height: 20.0)
                             Text("Phu Quoc, Vietnam")
                         }

@@ -59,7 +59,7 @@ extension UserView {
                 Text("Edit profile")
                     .padding()
                     .foregroundColor(.white)
-                    .background(Color("primaryBlue"))
+                    .background(Color("PrimaryBlue"))
                     .cornerRadius(15)
             })
         }
@@ -72,12 +72,12 @@ extension UserView {
                         HStack(spacing: 20.0){
                             ZStack {
                                 Circle()
-                                    .foregroundColor(Color("primaryBlue").opacity(0.2))
+                                    .foregroundColor(Color("PrimaryBlue").opacity(0.2))
                                 Image(systemName: "gear")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .frame(width: 25, height: 25)
-                                    .foregroundColor(Color("primaryBlue"))
+                                    .foregroundColor(Color("PrimaryBlue"))
                             }
                             .frame(width: 45, height: 45)
                             Text("Settings")
@@ -85,12 +85,12 @@ extension UserView {
                         HStack(spacing: 20.0){
                             ZStack {
                                 Circle()
-                                    .foregroundColor(Color("primaryBlue").opacity(0.2))
+                                    .foregroundColor(Color("PrimaryBlue").opacity(0.2))
                                 Image(systemName: "heart")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .frame(width: 25, height: 25)
-                                    .foregroundColor(Color("primaryBlue"))
+                                    .foregroundColor(Color("PrimaryBlue"))
                             }
                             .frame(width: 45, height: 45)
                             Text("Favourite List")
@@ -98,12 +98,12 @@ extension UserView {
                         HStack(spacing: 20.0){
                             ZStack {
                                 Circle()
-                                    .foregroundColor(Color("primaryBlue").opacity(0.2))
+                                    .foregroundColor(Color("PrimaryBlue").opacity(0.2))
                                 Image(systemName: "qrcode")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .frame(width: 25, height: 25)
-                                    .foregroundColor(Color("primaryBlue"))
+                                    .foregroundColor(Color("PrimaryBlue"))
                             }
                             .frame(width: 45, height: 45)
                             Text("My coupons")
@@ -111,12 +111,12 @@ extension UserView {
                         HStack(spacing: 20.0){
                             ZStack {
                                 Circle()
-                                    .foregroundColor(Color("primaryBlue").opacity(0.2))
+                                    .foregroundColor(Color("PrimaryBlue").opacity(0.2))
                                 Image(systemName: "megaphone")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .frame(width: 25, height: 25)
-                                    .foregroundColor(Color("primaryBlue"))
+                                    .foregroundColor(Color("PrimaryBlue"))
                             }
                             .frame(width: 45, height: 45)
                             Text("My events")
@@ -127,12 +127,12 @@ extension UserView {
                         HStack(spacing: 20.0){
                             ZStack {
                                 Circle()
-                                    .foregroundColor(Color("primaryBlue").opacity(0.2))
+                                    .foregroundColor(Color("PrimaryBlue").opacity(0.2))
                                 Image(systemName: "info")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .frame(width: 20, height: 20)
-                                    .foregroundColor(Color("primaryBlue"))
+                                    .foregroundColor(Color("PrimaryBlue"))
                             }
                             .frame(width: 45, height: 45)
                             Text("Info")
@@ -140,12 +140,12 @@ extension UserView {
                         HStack(spacing: 20.0){
                             ZStack {
                                 Circle()
-                                    .foregroundColor(Color("primaryBlue").opacity(0.2))
+                                    .foregroundColor(Color("PrimaryBlue").opacity(0.2))
                                 Image(systemName: "arrow.right.square")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .frame(width: 20, height: 20)
-                                    .foregroundColor(Color("primaryBlue"))
+                                    .foregroundColor(Color("PrimaryBlue"))
                             }
                             .frame(width: 45, height: 45)
                             Text("Logout")

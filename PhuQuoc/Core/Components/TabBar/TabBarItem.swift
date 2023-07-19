@@ -22,7 +22,7 @@ struct TabbarItem: View {
                     .frame(width: 25, height: 25)
                     .padding(.horizontal)
                     .padding(.vertical, 4)
-                    .foregroundColor(Color("primaryBlue"))
+                    .foregroundColor(Color("PrimaryBlue"))
                     //.matchedGeometryEffect(id: "highlightmenuitem", in:namespace)
                 
             case "Travel":
@@ -32,7 +32,7 @@ struct TabbarItem: View {
                     .frame(width: 25, height: 25)
                     .padding(.horizontal)
                     .padding(.vertical, 4)
-                    .foregroundColor(Color("primaryBlue"))
+                    .foregroundColor(Color("PrimaryBlue"))
                     //.matchedGeometryEffect(id: "highlightmenuitem", in:namespace)
             case "Events":
                 Image("radio")
@@ -41,7 +41,7 @@ struct TabbarItem: View {
                     .frame(width: 25, height: 25)
                     .padding(.horizontal)
                     .padding(.vertical, 4)
-                    .foregroundColor(Color("primaryBlue"))
+                    .foregroundColor(Color("PrimaryBlue"))
                     //.matchedGeometryEffect(id: "highlightmenuitem", in:namespace)
             case "Profile":
                 Image("user")
@@ -50,7 +50,7 @@ struct TabbarItem: View {
                     .frame(width: 25, height: 25)
                     .padding(.horizontal)
                     .padding(.vertical, 4)
-                    .foregroundColor(Color("primaryBlue"))
+                    .foregroundColor(Color("PrimaryBlue"))
                     //.matchedGeometryEffect(id: "highlightmenuitem", in:namespace)
             default:
                 Image("home")
@@ -59,7 +59,7 @@ struct TabbarItem: View {
                     .frame(width: 25, height: 25)
                     .padding(.horizontal)
                     .padding(.vertical, 4)
-                    .foregroundColor(Color("primaryBlue"))
+                    .foregroundColor(Color("PrimaryBlue"))
                     //.matchedGeometryEffect(id: "highlightmenuitem", in:namespace)
             }
 

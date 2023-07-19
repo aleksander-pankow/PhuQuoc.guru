@@ -26,7 +26,7 @@ struct RoundedButton: View {
             }
             .frame(maxWidth: .infinity)
             .foregroundColor(textColor)
-            .padding(30)
+            .padding(20)
             .background(bgColor)
             .mask(RoundedRectangle(cornerRadius: 15, style: .continuous))
             .overlay(RoundedRectangle(cornerRadius: 15, style: .continuous).stroke(lineWidth: 0.5).fill(.white.opacity(0.5)))

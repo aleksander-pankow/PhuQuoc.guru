@@ -27,6 +27,9 @@
 		E34866872A2394110052AE15 /* Extension+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34866862A2394110052AE15 /* Extension+Keyboard.swift */; };
 		E34866892A23A1DC0052AE15 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34866882A23A1DC0052AE15 /* Category.swift */; };
 		E34CF5282A62F8D7003507CC /* Component+Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34CF5272A62F8D7003507CC /* Component+Buttons.swift */; };
+		E352FFF62A6831AF00AFA28F /* Extension+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E352FFF52A6831AF00AFA28F /* Extension+View.swift */; };
+		E352FFF92A68533C00AFA28F /* BottomPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E352FFF82A68533C00AFA28F /* BottomPopupView.swift */; };
+		E352FFFB2A6853F600AFA28F /* UserProfileStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E352FFFA2A6853F600AFA28F /* UserProfileStartView.swift */; };
 		E3593AEC2A5A14F900399D6C /* UserEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3593AEB2A5A14F900399D6C /* UserEditView.swift */; };
 		E3593AEE2A5A151500399D6C /* UserFavoriteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3593AED2A5A151500399D6C /* UserFavoriteListView.swift */; };
 		E3593AF02A5A152900399D6C /* UserCouponsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3593AEF2A5A152900399D6C /* UserCouponsView.swift */; };
@@ -81,6 +84,9 @@
 		E34866862A2394110052AE15 /* Extension+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Keyboard.swift"; sourceTree = "<group>"; };
 		E34866882A23A1DC0052AE15 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		E34CF5272A62F8D7003507CC /* Component+Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Component+Buttons.swift"; sourceTree = "<group>"; };
+		E352FFF52A6831AF00AFA28F /* Extension+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+View.swift"; sourceTree = "<group>"; };
+		E352FFF82A68533C00AFA28F /* BottomPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomPopupView.swift; sourceTree = "<group>"; };
+		E352FFFA2A6853F600AFA28F /* UserProfileStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileStartView.swift; sourceTree = "<group>"; };
 		E3593AEB2A5A14F900399D6C /* UserEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEditView.swift; sourceTree = "<group>"; };
 		E3593AED2A5A151500399D6C /* UserFavoriteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFavoriteListView.swift; sourceTree = "<group>"; };
 		E3593AEF2A5A152900399D6C /* UserCouponsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCouponsView.swift; sourceTree = "<group>"; };
@@ -268,6 +274,7 @@
 				E395C50C2A34E72D00EDBA7D /* Extension+String.swift */,
 				E385CEC52A407CEB009DAEAC /* Extension+Location.swift */,
 				E3EBE1162A4349D5002B2A35 /* Extension+Text.swift */,
+				E352FFF52A6831AF00AFA28F /* Extension+View.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -308,6 +315,14 @@
 			path = Buttons;
 			sourceTree = "<group>";
 		};
+		E352FFF72A68532800AFA28F /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+				E352FFF82A68533C00AFA28F /* BottomPopupView.swift */,
+			);
+			path = Popup;
+			sourceTree = "<group>";
+		};
 		E3593AF12A5A153200399D6C /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
@@ -315,6 +330,7 @@
 				E3593AED2A5A151500399D6C /* UserFavoriteListView.swift */,
 				E3593AEF2A5A152900399D6C /* UserCouponsView.swift */,
 				E3593AF22A5A154B00399D6C /* UserEventListView.swift */,
+				E352FFFA2A6853F600AFA28F /* UserProfileStartView.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -392,6 +408,7 @@
 		E3E19B4B2A45ACD60061B0FC /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				E352FFF72A68532800AFA28F /* Popup */,
 				E38F23412A67D06700209D8E /* Loading */,
 				E34CF5262A62F8A5003507CC /* Buttons */,
 				E3593AF62A5A159C00399D6C /* QrCodeReader */,
@@ -514,6 +531,7 @@
 				E3593AEE2A5A151500399D6C /* UserFavoriteListView.swift in Sources */,
 				E3E3F12F2A5A10EE003893B6 /* LocationManager.swift in Sources */,
 				E3994D702A33DBEC00D3A98B /* UserView.swift in Sources */,
+				E352FFF62A6831AF00AFA28F /* Extension+View.swift in Sources */,
 				E32CFE942A4C6A6D00A30B54 /* CardView.swift in Sources */,
 				E3593AF52A5A156F00399D6C /* ScanQrView.swift in Sources */,
 				E395C5102A35158700EDBA7D /* PlaceCardView.swift in Sources */,
@@ -541,6 +559,8 @@
 				E35C10F72A36376F009B4944 /* BlurView.swift in Sources */,
 				E385CEC62A407CEB009DAEAC /* Extension+Location.swift in Sources */,
 				E3593AF92A5A15D900399D6C /* AboutAppView.swift in Sources */,
+				E352FFFB2A6853F600AFA28F /* UserProfileStartView.swift in Sources */,
+				E352FFF92A68533C00AFA28F /* BottomPopupView.swift in Sources */,
 				E3E3F1312A5A110E003893B6 /* NavigationManager.swift in Sources */,
 				E395C5122A3526AB00EDBA7D /* Extension+Blur.swift in Sources */,
 				E34866892A23A1DC0052AE15 /* Category.swift in Sources */,
@@ -684,6 +704,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -717,6 +738,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
