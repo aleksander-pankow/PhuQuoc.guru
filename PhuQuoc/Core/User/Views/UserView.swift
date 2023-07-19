@@ -10,7 +10,7 @@ import FirebaseAuth
 
 struct UserView: View {
     
-    @StateObject private var authViewModel = AuthViewModel()
+    @StateObject var vm = UserViewModel()
     
     var body: some View {
         VStack{
@@ -18,7 +18,11 @@ struct UserView: View {
             Spacer()
             menu
             Spacer()
-        }.padding(.horizontal, 50)
+        }
+        .padding(.horizontal, 50)
+        .onAppear(){
+            //userViewModel.fetchCurrentUserInfo()
+        }
     }
 }
 
@@ -31,8 +35,8 @@ struct UserView_Previews: PreviewProvider {
 //MARK: - VIEW COMPONENTS
 
 extension UserView {
-    private var header: some View{
-        Group{
+    private var header: some View {
+        VStack{
             AsyncImage(url: URL(string: "https://picsum.photos/300")) { phase in
                 if let image = phase.image {
                     image // Displays the loaded image.
@@ -46,21 +50,18 @@ extension UserView {
             .frame(width: 100, height: 100)
             .mask(Circle())
             
-            Text("Aleksander")
+            Text(vm.testUser.name)
                 .font(.title2)
                 .fontWeight(.bold)
             
-            Text("testemail@test.com")
-                .font(.body)
-                .fontWeight(.regular)
-                .foregroundColor(Color.gray)
-            NavigationLink(destination: UserEditView()){
+            
+            NavigationLink(destination: UserEditView(displayName: vm.testUser.name, phoneNumber: vm.testUser.phone ?? "", birthdate: Date()), label: {
                 Text("Edit profile")
                     .padding()
                     .foregroundColor(.white)
                     .background(Color("primaryBlue"))
                     .cornerRadius(15)
-            }
+            })
         }
     }
     private var menu: some View{

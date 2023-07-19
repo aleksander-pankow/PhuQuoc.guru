@@ -10,17 +10,17 @@ import FirebaseAuth
 
 struct ContentView: View {
     
-    @StateObject private var authViewModel = AuthViewModel()
+    @StateObject private var vm = UserViewModel()
     
     var body: some View {
         Group{
-            if authViewModel.isUserAuthenticated {
+            if vm.isUserAuthenticated {
                 MainView(selectedIndex: 0)
             } else {
                 WelcomeView()
             }
         }.onAppear{
-            authViewModel.checkUserAuthentication()
+            vm.checkUserAuthentication()
         }
 
     }

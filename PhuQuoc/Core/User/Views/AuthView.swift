@@ -14,24 +14,35 @@ struct AuthView: View {
     
     @State private var email = ""
     @State private var password = ""
+    
+    @State private var action = "login" // action track
 
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
-        ZStack(alignment: .bottom){
-            VStack(spacing: 20){
-                Image("logo")
-                    .offset(x: -100, y: -200)
+        ZStack{
+            Color(.gray)
+                .opacity(0.1)
+            VStack(alignment: .center, spacing: 20){
+                Text(action == "login" ? "Sign In" : "Login")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
                 TextField("E-mail", text: $email)
-                    .padding(.bottom, 3.0)
-                Rectangle()
-                    .frame(height:1)
+                    .padding(20)
+                    .background(.white)
+                    .cornerRadius(15)
                 SecureField("Password", text: $password)
-                    .padding(.vertical, 3.0)
-                Rectangle()
-                    .frame(height:1)
-                Button {
-                    authViewModel.register(email: email, password: password)
+                    .padding(20)
+                    .background(.white)
+                    .cornerRadius(15)
+                RoundedButton(
+                    text: action == "login" ? "Sign In" : "Login",
+                    bgColor: Color("PrimaryBlue"),
+                    textColor: .white
+                ) {
+                    action == "login" ?
+                        authViewModel.login(email: email, password: password) :
+                        authViewModel.register(email: email, password: password)
                     withAnimation(.easeInOut){
                         authViewModel.showError = true
                         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
@@ -40,26 +51,18 @@ struct AuthView: View {
                             }
                         }
                     }
-                } label: {
-                    Text("Sign In")
-                        .bold()
-                        .frame(width: 200, height: 40)
-                        .background(.black)
-                        .padding(.top)
                 }
                 Button {
-                    authViewModel.login(email: email, password: password)
-                    withAnimation(.easeInOut){
-                        authViewModel.showError = true
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-                            withAnimation(.easeInOut){
-                                authViewModel.showError = false
-                            }
-                        }
-                    }
+                    action = action == "login" ? "signin" : "login"
                 } label: {
-                    Text("Already have account? Login")
-                        .padding(.top)
+                    HStack{
+                        Text(action == "login" ? "Already have account?" : "New around here?")
+                            .foregroundColor(Color.black)
+                        Text(action == "login" ? "Login" : "Sign In")
+                            .font(.headline)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color("PrimaryBlue"))
+                    }
                 }
 
             }

@@ -27,7 +27,7 @@ struct CardView: View {
             Image("Heart_01")
                 .resizable()
                 .renderingMode(.template)
-                .foregroundColor(Color("primaryYellow"))
+                .foregroundColor(Color("PrimaryYellow"))
                 .frame(width: 20, height: 20)
                 .mask(Circle())
                 .padding(10)
@@ -99,7 +99,7 @@ extension CardView{
                         {
                             Circle()
                                 .frame(width: 15)
-                                .foregroundColor(Color("primaryYellow").opacity(0.5))
+                                .foregroundColor(Color("PrimaryYellow").opacity(0.5))
                                 .offset(x: 2, y: 3)
                         }
                 }
@@ -126,7 +126,7 @@ extension CardView{
                 Image("Star_Fill")
                 .resizable()
                 .renderingMode(.template)
-                .foregroundColor(Color("primaryYellow"))
+                .foregroundColor(Color("PrimaryYellow"))
                 .frame(width: 15, height: 15)
                 Text(String(format: "%.1f", listing.rating.rating))
                     .font(.system(size: 14))
