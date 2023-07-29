@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     
     @ObservedObject var vm = ListingViewModel()
+    @StateObject var uvm = UserViewModel()
     
     @State private var searchText = ""
     @State private var showingSheet = false
@@ -29,11 +30,11 @@ struct HomeView: View {
         .onTapGesture {
             self.hideKeyboard()
         }
-        .popup(isPresented: $isPresented) {
-            BottomPopupView {
-                UserProfileStartView(isPresented: $isPresented)
-            }
-        }
+        //        .popup(isPresented: $isPresented) {
+        //            BottomPopupView {
+        //                UserProfileStartView(isPresented: $isPresented)
+        //            }
+        //        }
     }
     
     
@@ -53,8 +54,9 @@ extension HomeView {
             HStack(spacing:30){
                 HStack{
                     VStack(alignment: .leading, spacing: 5.0){
-                        Text("Hi Alex,")
+                        Text("Hello " + (uvm.testUser.name))
                             .font(.title)
+                            .redacted(reason: uvm.testUser.name.isEmpty ? .placeholder : [])
                         HStack{
                             Image("navigation")
                                 .resizable()

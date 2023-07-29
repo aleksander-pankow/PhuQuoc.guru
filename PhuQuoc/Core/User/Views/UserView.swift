@@ -10,7 +10,7 @@ import FirebaseAuth
 
 struct UserView: View {
     
-    @StateObject var vm = UserViewModel()
+    @StateObject var uvm = UserViewModel()
     
     var body: some View {
         VStack{
@@ -50,12 +50,16 @@ extension UserView {
             .frame(width: 100, height: 100)
             .mask(Circle())
             
-            Text(vm.testUser.name)
+            Text(uvm.testUser.name)
                 .font(.title2)
                 .fontWeight(.bold)
+                .redacted(reason: uvm.testUser.name.isEmpty ? .placeholder : [])
             
             
-            NavigationLink(destination: UserEditView(displayName: vm.testUser.name, phoneNumber: vm.testUser.phone ?? "", birthdate: Date()), label: {
+            NavigationLink(destination: UserEditView(
+                displayName: uvm.testUser.name,
+                phoneNumber: uvm.testUser.phone ?? "",
+                birthdate: Date()), label: {
                 Text("Edit profile")
                     .padding()
                     .foregroundColor(.white)

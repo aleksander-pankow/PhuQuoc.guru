@@ -46,39 +46,48 @@ class ListingViewModel: ObservableObject {
         featured: Bool
     ) async {
         
-        loadingStatus = .loading
-        //set network request to active loading
-        
-        let url = "https://phuquoc.guru/wp-json/cththemes/v1/listings"
-        let parameters: Parameters = [
-            "paged": page,
-            "posts_per_page": itemsPerPage,
-            "ltype": listingType ?? "",
-            "search_term": searchTerm ?? "",
-            "nearby": nearby ?? "",
-            "address_lat": latitude ?? "",
-            "address_lng": longitude ?? "",
-            "distance": 50,
-        ]
-        
-        AF.request(url, parameters: parameters)
-            .validate()
-            .responseDecodable(of: JSONResponse.self) { [weak self] response in
-                guard let self else { return }
-                switch response.result {
-                case .success(let data):
-                    if featured == true {
-                        self.listings += data.items.filter{ $0.isFeatured == true }
-                    } else {
-                        self.listings +=  data.items
-                    }
-                    self.totalPages = data.pages
-                    
-                case .failure(let error):
-                    print("Error: \(error)")
-
-                }
+        Task{
+            DispatchQueue.main.async {
+                self.loadingStatus = .loading
             }
+            //set network request to active loading
+            
+            let url = "https://phuquoc.guru/wp-json/cththemes/v1/listings"
+            let parameters: Parameters = [
+                "paged": page,
+                "posts_per_page": itemsPerPage,
+                "ltype": listingType ?? "",
+                "search_term": searchTerm ?? "",
+                "nearby": nearby ?? "",
+                "address_lat": latitude ?? "",
+                "address_lng": longitude ?? "",
+                "distance": 50,
+            ]
+            
+            AF.request(url, parameters: parameters)
+                .validate()
+                .responseDecodable(of: JSONResponse.self) { [weak self] response in
+                    guard let self else { return }
+                    switch response.result {
+                    case .success(let data):
+                        DispatchQueue.main.async {
+                            if featured == true {
+                                self.listings += data.items.filter{ $0.isFeatured == true }
+                            } else {
+                                self.listings +=  data.items
+                            }
+                            self.totalPages = data.pages
+                            self.loadingStatus = .loaded
+                        }
+                    case .failure(let error):
+                        print("Error: \(error)")
+                        DispatchQueue.main.async {
+                            // Perform UI updates on the main thread
+                            self.loadingStatus = .error
+                        }
+                    }
+                }
+        }
     }
     
 }

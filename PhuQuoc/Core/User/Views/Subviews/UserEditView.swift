@@ -15,18 +15,11 @@ struct UserEditView: View {
     @State var phoneNumber: String // Phone number
     @State var birthdate = Date() // Birth Date
     
+    /// Modifiers
     @State private var isDatePickerShown = false // Picker show: true/false
     
-    // Date formatter function
-    private let dateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .long
-        formatter.timeStyle = .none
-        return formatter
-    }()
-    
-    
     var body: some View {
+        
         VStack(alignment:.leading){
             List {
                 Section(header: Text("Profile")) {
@@ -84,6 +77,12 @@ struct UserEditView: View {
             }
             .listStyle(GroupedListStyle())
             .navigationBarTitle("Settings")
+            .navigationBarItems(trailing: Button(action: {
+                // Update user information
+            }) {
+                Text("Save")
+            })
+            
         }
     }
     
@@ -91,7 +90,7 @@ struct UserEditView: View {
 
 struct UserEditView_Previews: PreviewProvider {
     static var previews: some View {
-        let testUser = User(name: "Aleksander", birth: Date(), coupons: [], favorite: [], gender: "Male", photo: "", phone: "", visits: [])
+        let testUser = User(name: "", birth: Date(), coupons: [], favorite: [], gender: "Male", photo: "", phone: "", visits: [])
         UserEditView(
             displayName: testUser.name,
             phoneNumber: testUser.phone ?? "Empty",
@@ -100,8 +99,8 @@ struct UserEditView_Previews: PreviewProvider {
     }
     
     static func getSampleDate() -> Date? {
-            let calendar = Calendar.current
-            let components = DateComponents(year: 2022, month: 6, day: 1)
-            return calendar.date(from: components)
-        }
+        let calendar = Calendar.current
+        let components = DateComponents(year: 2022, month: 6, day: 1)
+        return calendar.date(from: components)
+    }
 }

@@ -17,14 +17,18 @@ protocol UserHandlerProtocol{
     func checkUserAuthentication() // auth cheker function
     func signOutUser() // logout function
     func updateUserData(name: String) // update user information function
-    //func fetchCurrentUserInfo()
+    func fetchCurrentUserInfo()
 }
 
 class UserViewModel: ObservableObject, UserHandlerProtocol{
     
+    init() {
+        fetchCurrentUserInfo()
+    }
+    
     //MARK: - UserViewModel
     
-    @Published var currentUserFirestore: User? // current Firestore user information object
+    @Published var currentUser: User? // current Firestore user information object
     @Published var isUserAuthenticated = false // auth status: true/false
     @Published var message: String = "" // status message: error or success
     @Published var showError: Bool = false // show error modal controller: true/false
@@ -34,7 +38,16 @@ class UserViewModel: ObservableObject, UserHandlerProtocol{
     private let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest() // Firebase user change request function
     
     /// Mock User Data
-    @Published var testUser = User(name: "Aleksander", birth: Date(timeIntervalSinceNow: 7200), coupons: [], favorite: [], gender: "Male", photo: "", phone: "", visits: [])
+    @Published var testUser = User(
+        name: "Aleksander",
+        birth: Date(timeIntervalSinceNow: 7200),
+        coupons: [],
+        favorite: [],
+        gender: "Male",
+        photo: "",
+        phone: "",
+        visits: []
+    )
     
     // Auth cheker function
     func checkUserAuthentication() {
@@ -95,33 +108,42 @@ class UserViewModel: ObservableObject, UserHandlerProtocol{
             // Add other fields as needed
         ]
         
-//        currentUserInformation.updateData(data) { error in
-//            if let error = error {
-//                print("Error updating document: \(error.localizedDescription)")
-//            } else {
-//                print("Document updated successfully")
-//            }
-//        }
+        //        currentUserInformation.updateData(data) { error in
+        //            if let error = error {
+        //                print("Error updating document: \(error.localizedDescription)")
+        //            } else {
+        //                print("Document updated successfully")
+        //            }
+        //        }
     }
     
-    //    let currentUserInformation = Firestore.firestore().collection("user").document(Auth.auth().currentUser!.uid)
-    //    func fetchCurrentUserInfo() {
-    //
-    //        listener = currentUserInformation.addSnapshotListener { [weak self] (snapshot, error) in
-    //            guard let self = self else { return }
-    //
-    //            if let error = error {
-    //                print("Error fetching document: \(error.localizedDescription)")
-    //                return
-    //            }
-    //
-    //            guard let snapshot = snapshot, snapshot.exists, let documentData = try? snapshot.data(as: User.self) else {
-    //                print("Document data is invalid")
-    //                return
-    //            }
-    //
-    //            self.currentUserFirestore = documentData
-    //        }
-    //    }
+    func fetchCurrentUserInfo() {
+        let db = Firestore.firestore()
+        db.collection("user").whereField("ownerId", isEqualTo: Auth.auth().currentUser!.uid)
+            .getDocuments { (snapshot, error) in
+                if let error = error {
+                    print("Error getting documents: \(error)")
+                } else {
+                    guard let documents = snapshot?.documents else {
+                        print("No documents found.")
+                        return
+                    }
+                    if let document = documents.first {
+                        let data = document.data()
+                        self.currentUser = User(
+                            name: data["name"] as! String,
+                            birth: nil,
+                            coupons: nil,
+                            favorite: nil,
+                            gender: nil,
+                            photo: nil,
+                            phone: nil,
+                            visits: nil
+                        )
+                    }
+                
+                }
+            }
+    }
     
 }
