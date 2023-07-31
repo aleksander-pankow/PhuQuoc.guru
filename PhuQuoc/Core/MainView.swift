@@ -15,21 +15,24 @@ struct MainView: View {
     
     var body: some View {
         ZStack {
-            Color.black.edgesIgnoringSafeArea(.all)
             NavigationView{
                 ZStack(alignment: .bottom){
                     TabView(selection: $selectedIndex) {
                         HomeView()
                             .tag(0)
+                            .background(Color("PrimaryGray"))
                             .ignoresSafeArea()
                         ListingsView()
                             .tag(1)
+                            .background(Color("PrimaryGray"))
                             .ignoresSafeArea()
                         EventsView()
                             .tag(2)
+                            .background(Color("PrimaryGray"))
                             .ignoresSafeArea()
                         UserView()
                             .tag(3)
+                            .background(Color("PrimaryGray"))
                             .ignoresSafeArea()
                     }
                     .onAppear(){
@@ -38,9 +41,10 @@ struct MainView: View {
                         UITabBar.appearance().standardAppearance = transparentAppearence
                     }
                     TabBarView(tabbarItems: tabbarItems, selectedIndex: $selectedIndex)
-                        .padding(.horizontal)
+                        .padding(.horizontal, 30)
                 }
             }
+            
         }
  
     }

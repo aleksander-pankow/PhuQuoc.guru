@@ -13,6 +13,24 @@ struct ContentView: View {
     @StateObject private var vm = UserViewModel()
     
     var body: some View {
+        test
+    }
+
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+
+//MARK: - VIEW COMPONENTS
+
+extension ContentView {
+    private var test: some View{
+        MainView(selectedIndex: 0)
+    }
+    private var production: some View{
         Group{
             if vm.isUserAuthenticated {
                 MainView(selectedIndex: 0)
@@ -22,13 +40,5 @@ struct ContentView: View {
         }.onAppear{
             vm.checkUserAuthentication()
         }
-
-    }
-
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }

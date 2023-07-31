@@ -22,7 +22,7 @@ struct TabbarItem: View {
                     .frame(width: 25, height: 25)
                     .padding(.horizontal)
                     .padding(.vertical, 4)
-                    .foregroundColor(Color("PrimaryBlue"))
+                    .foregroundColor(Color("PrimaryYellow"))
                     //.matchedGeometryEffect(id: "highlightmenuitem", in:namespace)
                 
             case "Travel":
@@ -32,7 +32,7 @@ struct TabbarItem: View {
                     .frame(width: 25, height: 25)
                     .padding(.horizontal)
                     .padding(.vertical, 4)
-                    .foregroundColor(Color("PrimaryBlue"))
+                    .foregroundColor(Color("PrimaryYellow"))
                     //.matchedGeometryEffect(id: "highlightmenuitem", in:namespace)
             case "Events":
                 Image("radio")
@@ -41,7 +41,7 @@ struct TabbarItem: View {
                     .frame(width: 25, height: 25)
                     .padding(.horizontal)
                     .padding(.vertical, 4)
-                    .foregroundColor(Color("PrimaryBlue"))
+                    .foregroundColor(Color("PrimaryYellow"))
                     //.matchedGeometryEffect(id: "highlightmenuitem", in:namespace)
             case "Profile":
                 Image("user")
@@ -50,7 +50,7 @@ struct TabbarItem: View {
                     .frame(width: 25, height: 25)
                     .padding(.horizontal)
                     .padding(.vertical, 4)
-                    .foregroundColor(Color("PrimaryBlue"))
+                    .foregroundColor(Color("PrimaryYellow"))
                     //.matchedGeometryEffect(id: "highlightmenuitem", in:namespace)
             default:
                 Image("home")
@@ -59,7 +59,7 @@ struct TabbarItem: View {
                     .frame(width: 25, height: 25)
                     .padding(.horizontal)
                     .padding(.vertical, 4)
-                    .foregroundColor(Color("PrimaryBlue"))
+                    .foregroundColor(Color("PrimaryYellow"))
                     //.matchedGeometryEffect(id: "highlightmenuitem", in:namespace)
             }
 
@@ -69,32 +69,32 @@ struct TabbarItem: View {
                 Image("home")
                     .renderingMode(.template)
                     .resizable()
-                    .foregroundColor(Color.gray)
+                    .foregroundColor(.white.opacity(0.6))
                     .frame(width: 25, height: 25)
                 
             case "Travel":
                 Image("map")
                     .renderingMode(.template)
                     .resizable()
-                    .foregroundColor(Color.gray)
+                    .foregroundColor(.white.opacity(0.6))
                     .frame(width: 25, height: 25)
             case "Events":
                 Image("radio")
                     .renderingMode(.template)
                     .resizable()
-                    .foregroundColor(Color.gray)
+                    .foregroundColor(.white.opacity(0.6))
                     .frame(width: 25, height: 25)
             case "Profile":
                 Image("user")
                     .renderingMode(.template)
                     .resizable()
-                    .foregroundColor(Color.gray)
+                    .foregroundColor(.white.opacity(0.6))
                     .frame(width: 25, height: 25)
             default:
                 Image("home")
                     .renderingMode(.template)
                     .resizable()
-                    .foregroundColor(Color.gray)
+                    .foregroundColor(.white.opacity(0.6))
                     .frame(width: 25, height: 25)
             }
         }

@@ -14,10 +14,7 @@ struct HomeView: View {
     
     @State private var searchText = ""
     @State private var showingSheet = false
-    @State private var activeIndex = 0
     @State private var isPresented = true
-    
-    let activityCategories: [String] = ["🏖️Beaches", "🦐Food", "🤿Snorkeling", "🏞️Parks", "🛥️Activity", "🏺Culture", "🎣Fishing", "🛒Markets", "🎡Hopping"]
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: false){
@@ -26,9 +23,12 @@ struct HomeView: View {
             favorited
             inspirations
         }
-        .padding()
+        .padding(.horizontal, 30)
         .onTapGesture {
             self.hideKeyboard()
+        }
+        .onAppear{
+            print(vm.activeCategoryIndex)
         }
         //        .popup(isPresented: $isPresented) {
         //            BottomPopupView {
@@ -54,18 +54,24 @@ extension HomeView {
             HStack(spacing:30){
                 HStack{
                     VStack(alignment: .leading, spacing: 5.0){
-                        Text("Hello " + (uvm.testUser.name))
-                            .font(.title)
-                            .redacted(reason: uvm.testUser.name.isEmpty ? .placeholder : [])
                         HStack{
-                            Image("navigation")
-                                .resizable()
-                                .renderingMode(.template)
-                                .foregroundColor(Color("PrimaryBlue"))
-                                .frame(width: 20.0, height: 20.0)
-                            Text("Phu Quoc, Vietnam")
+                            NavigationLink(destination: UserView()){
+                                    Image("ava")
+                                        .resizable()
+                                        .clipShape(Circle())
+                                        .overlay {
+                                            Circle()
+                                                .stroke(.gray, lineWidth: 5)
+                                                .shadow(color: .black.opacity(0.3), radius: 3, x: 0, y: 3)
+                                        }
+                                        .frame(width: 50.0, height: 50.0)
+                                        .edgesIgnoringSafeArea(.all)
+
+                            }
+                            Text("Hello " + (uvm.testUser.name))
+                                .font(.title3)
+                                .redacted(reason: uvm.testUser.name.isEmpty ? .placeholder : [])
                         }
-                        .opacity(0.5)
                     }
                 }
                 Spacer()
@@ -80,6 +86,7 @@ extension HomeView {
         }
         .padding(.top, 40)
     }
+    
     private var categories: some View{
         Section{
             HStack{
@@ -92,51 +99,72 @@ extension HomeView {
                 }
                 Spacer()
             }
-            ScrollViewReader { proxy in
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(alignment: .top, spacing: 15.0){
-                        ForEach(vm.favoriteCategories, id: \.id) { category in
-                            VStack(alignment: .center, spacing:10){
-                                Text(String(category.title))
-                                    .foregroundColor(
-                                        category.id == activeIndex ?
-                                        Color.white :
-                                            Color.gray
-                                    )
-                            }
-                            .padding([.top, .bottom], 15)
-                            .padding([.leading, .trailing], 20)
-                            .background(
-                                category.id == activeIndex ?
-                                Color.blue :
-                                    Color.white
-                            )
-                            .overlay(RoundedRectangle(cornerRadius: 20, style: .continuous).stroke(lineWidth: 0.5).fill(.black.opacity(0.5)))
-                            .cornerRadius(20)
-                            .shadow(
-                                color: .blue.opacity(
-                                    category.id == activeIndex ? 0.2 : 0
-                                ),
-                                radius: 5,
-                                x: 0,
-                                y: 5
-                            )
-                            .id(category)
-                            .onTapGesture{
-                                withAnimation{
-                                    proxy.scrollTo(category, anchor: .center)
-                                    activeIndex = category.id
-                                }
-                            }
-                            .onAppear{
-                                activeIndex = category.id
-                            }
-                        }
-                        .frame(height: 80.0)
-                    }
+            VStack(spacing: 10.0){
+                HStack{
+                    Text("Categories")
+                        .font(.title2)
+                        .fontWeight(.bold)
+                    Spacer()
                 }
-                
+                ScrollViewReader { proxy in
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(alignment: .center, spacing: 15.0){
+                            ForEach(vm.favoriteCategories, id: \.id) { category in
+                                VStack(alignment: .center, spacing:10){
+                                    HStack(spacing: 20.0){
+                                        ZStack{
+                                            Text(String(category.title.prefix(1)))
+                                                .blur(radius: 2)
+                                                .offset(y: 3)
+                                            Text(String(category.title.prefix(1)))
+                                                
+                                        }
+                                        .padding(10)
+                                        .background(Color("SecondaryGray"))
+                                        .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(lineWidth: 2).fill(.gray.opacity(0.05)))
+                                            .cornerRadius(10)
+                                        Text(String(category.title.dropFirst()))
+                                            .padding(.trailing, 10)
+                                            .foregroundColor(
+                                                category.id == vm.activeCategoryIndex ?
+                                                Color.black :
+                                                    Color.gray
+                                            )
+                                    }
+                                }
+                                .padding(10)
+                                .background(
+                                    category.id == vm.activeCategoryIndex ?
+                                    Color.white :
+                                        nil
+                                )
+                                .overlay(RoundedRectangle(cornerRadius: 20, style: .continuous).stroke(lineWidth: 2).fill(
+                                    category.id == vm.activeCategoryIndex ? .white : .gray.opacity(0.1))
+                                )
+                                .cornerRadius(20)
+                                .shadow(
+                                    color: .gray.opacity(
+                                        category.id == vm.activeCategoryIndex ? 0.08 : 0
+                                    ),
+                                    radius: 5,
+                                    x: 0,
+                                    y: 5
+                                )
+                                .onTapGesture{
+                                    withAnimation{
+                                        vm.activeCategoryIndex = category.id
+                                        proxy.scrollTo(category, anchor: .center)
+                                    }
+                                }
+                                .id(category)
+                            }
+                            .frame(height: 80.0)
+                        }
+                    }
+                    
+                }
             }
+            .padding(.top)
         }
     }
     private var favorited: some View{
@@ -155,7 +183,7 @@ extension HomeView {
                     Text("View all")
                         .font(.headline)
                         .fontWeight(.bold)
-                        .foregroundColor(Color.blue)
+                        .foregroundColor(Color("PrimaryBlue"))
                 }
                 .padding(.top)
                 ScrollView(.horizontal, showsIndicators: false){
@@ -184,7 +212,7 @@ extension HomeView {
                     Text("View all")
                         .font(.headline)
                         .fontWeight(.bold)
-                        .foregroundColor(Color.blue)
+                        .foregroundColor(Color("PrimaryBlue"))
                 }
                 .padding(.top)
                 ScrollView(.horizontal, showsIndicators: false){

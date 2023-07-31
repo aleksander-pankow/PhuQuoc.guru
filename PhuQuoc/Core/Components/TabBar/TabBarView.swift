@@ -27,7 +27,7 @@ struct TabBarView: View {
         }
         .padding()
         .frame(maxWidth: .infinity)
-        .background(Color(.systemGray6))
+        .background(Color("PrimaryBlue"))
         .cornerRadius(25)
     }
 }
