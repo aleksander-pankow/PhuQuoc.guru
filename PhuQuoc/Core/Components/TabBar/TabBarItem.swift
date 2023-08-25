@@ -43,8 +43,8 @@ struct TabbarItem: View {
                     .padding(.vertical, 4)
                     .foregroundColor(Color("PrimaryYellow"))
                     //.matchedGeometryEffect(id: "highlightmenuitem", in:namespace)
-            case "Profile":
-                Image("user")
+            case "Coupons":
+                Image(systemName: "qrcode")
                     .renderingMode(.template)
                     .resizable()
                     .frame(width: 25, height: 25)
@@ -84,8 +84,8 @@ struct TabbarItem: View {
                     .resizable()
                     .foregroundColor(.white.opacity(0.6))
                     .frame(width: 25, height: 25)
-            case "Profile":
-                Image("user")
+            case "Coupons":
+                Image(systemName: "qrcode")
                     .renderingMode(.template)
                     .resizable()
                     .foregroundColor(.white.opacity(0.6))

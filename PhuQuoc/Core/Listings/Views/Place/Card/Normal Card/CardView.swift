@@ -11,8 +11,8 @@ struct CardView: View {
     
     let listing: Listing
     let navigation = NavigationManager()
+    let width: CGFloat
     
-    private let width = UIScreen.main.bounds.width
     private let height = UIScreen.main.bounds.height
     
     @State private var isSheetPresented = false
@@ -22,7 +22,7 @@ struct CardView: View {
             background
             content
         }
-        .frame(height: 280.0)
+        .frame(width: width, height: 280.0)
         .overlay(alignment: .topTrailing){
             Image("Heart_01")
                 .resizable()
@@ -51,7 +51,7 @@ struct CardView: View {
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
         let listing = Listing(id: 1, rating: Rating(base: 4, rating: 4, count: 5, countText: "3"), address: "Adress", latitude: 40.7, longitude: -73.87, url: "https://phuquoc.guru", title: "City Street Coffee", content: "Test content", excerpt: "Test excerpt", price: 300, thumbnail: "https://picsum.photos/800", photos: [Photos(title: "", src: "https://picsum.photos/800"),Photos(title: "", src: "https://picsum.photos/800"),Photos(title: "", src: "https://picsum.photos/800")], distance: "1", distanceWithUnit: "3", isFeatured: true, authorID: "4", authorName: "Alex", viewCount: 123)
-        CardView(listing: listing)
+        CardView(listing: listing, width: UIScreen.main.bounds.width)
     }
 }
 

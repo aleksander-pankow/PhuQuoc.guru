@@ -19,7 +19,7 @@ struct ListingsView: View {
             ScrollView{
                 LazyVStack(spacing: 30){
                     ForEach(vm.listings, id: \.id) { listing in
-                        CardView(listing: listing)
+                        CardView(listing: listing, width: UIScreen.main.bounds.width)
                             .padding(.horizontal)
                             .onAppear {
                                 Task{
@@ -34,6 +34,7 @@ struct ListingsView: View {
                                             nearby:nil,
                                             latitude:nil,
                                             longitude:nil,
+                                            fetchMode: .infinity,
                                             featured:false)
                                         
                                         vm.loadingStatus = .loaded
@@ -66,6 +67,7 @@ struct ListingsView: View {
                         nearby:nil,
                         latitude:nil,
                         longitude:nil,
+                        fetchMode: .infinity,
                         featured:false)
                 }
             }

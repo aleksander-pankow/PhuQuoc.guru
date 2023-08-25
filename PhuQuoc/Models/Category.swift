@@ -12,4 +12,5 @@ struct Category: Hashable {
     let title: String
     let term: String
     let isFeatured: Bool
+    let lcat: Int
 }

@@ -23,16 +23,19 @@ class ListingViewModel: ObservableObject {
     @Published var loadingStatus: NetworkState = .none
     // status of network request
     
+    @Published var fetchMode: FetchMode = .infinity
+    // request mode: infinity/category
+    
     @Published var favoriteCategories: [Category] = [
-        Category(id: 0, title: "🔥Popular", term: "", isFeatured: true),
-        Category(id: 1, title: "🏖️Beaches", term: "#phuquoc.guru.beach", isFeatured: false),
-        Category(id: 2, title: "🍜Food", term: "#phuquoc.guru.food", isFeatured: false),
-        Category(id: 3, title: "🛒Markets", term: "#phuquoc.guru.markets", isFeatured: false),
-        Category(id: 4, title: "🤿Snorkeling", term: "#phuquoc.guru.food", isFeatured: false),
-        Category(id: 5, title: "🎣Fishing", term: "#phuquoc.guru.food", isFeatured: false),
-        Category(id: 6, title: "🏞️Parks", term: "#phuquoc.guru.food", isFeatured: false),
-        Category(id: 7, title: "🎫Events", term: "#phuquoc.guru.events", isFeatured: false),
-        Category(id: 8, title: "🏺Culture", term: "#phuquoc.guru.food", isFeatured: false)
+        Category(id: 0, title: "🔥Popular", term: "", isFeatured: true, lcat: 0),
+        Category(id: 1, title: "🏖️Beaches", term: "#phuquoc.guru.beach", isFeatured: false, lcat: 9452),
+        Category(id: 2, title: "🍜Food", term: "#phuquoc.guru.food", isFeatured: false, lcat: 0),
+        Category(id: 3, title: "🛒Markets", term: "#phuquoc.guru.markets", isFeatured: false, lcat: 0),
+        Category(id: 4, title: "🤿Snorkeling", term: "#phuquoc.guru.food", isFeatured: false, lcat: 0),
+        Category(id: 5, title: "🎣Fishing", term: "#phuquoc.guru.food", isFeatured: false, lcat: 0),
+        Category(id: 6, title: "🏞️Parks", term: "#phuquoc.guru.food", isFeatured: false, lcat: 0),
+        Category(id: 7, title: "🎫Events", term: "#phuquoc.guru.events", isFeatured: false, lcat: 0),
+        Category(id: 8, title: "🏺Culture", term: "#phuquoc.guru.food", isFeatured: false, lcat: 0)
     ]
     // array of categories
     
@@ -47,6 +50,7 @@ class ListingViewModel: ObservableObject {
         nearby: String?,
         latitude: Double?,
         longitude: Double?,
+        fetchMode: FetchMode?,
         featured: Bool
     ) async {
         
@@ -75,6 +79,9 @@ class ListingViewModel: ObservableObject {
                     switch response.result {
                     case .success(let data):
                         DispatchQueue.main.async {
+                            if fetchMode == .category {
+                                self.listings.removeAll()
+                            }
                             if featured == true {
                                 self.listings += data.items.filter{ $0.isFeatured == true }
                             } else {

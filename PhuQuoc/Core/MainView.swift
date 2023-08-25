@@ -10,18 +10,16 @@ import FirebaseAuth
 
 struct MainView: View {
     
-    let tabbarItems = [ "Home", "Travel", "Events","Profile" ]
+    let tabbarItems = [ "Home", "Travel", "Events","Coupons" ]
     @State var selectedIndex: Int
     
     var body: some View {
-        ZStack {
             NavigationView{
                 ZStack(alignment: .bottom){
                     TabView(selection: $selectedIndex) {
                         HomeView()
                             .tag(0)
                             .background(Color("PrimaryGray"))
-                            .ignoresSafeArea()
                         ListingsView()
                             .tag(1)
                             .background(Color("PrimaryGray"))
@@ -30,7 +28,7 @@ struct MainView: View {
                             .tag(2)
                             .background(Color("PrimaryGray"))
                             .ignoresSafeArea()
-                        UserView()
+                        CouponView()
                             .tag(3)
                             .background(Color("PrimaryGray"))
                             .ignoresSafeArea()
@@ -44,10 +42,7 @@ struct MainView: View {
                         .padding(.horizontal, 30)
                 }
             }
-            
         }
- 
-    }
 }
 
 struct MainView_Previews: PreviewProvider {
