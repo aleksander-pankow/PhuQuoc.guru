@@ -15,13 +15,9 @@ struct WelcomeView: View {
     
     var body: some View {
         ZStack(alignment:.bottom){
-            
             background
-            
             Spacer()
-            
             content
-            
         }
         .ignoresSafeArea(.all)
         .sheet(isPresented: $isSheetPresented){
@@ -46,36 +42,23 @@ extension WelcomeView{
             
             LinearGradient(colors: [
                 Color.white.opacity(0),
-                Color("primaryBlue").opacity(0.6)
+                Color("PrimaryBlue").opacity(0.6)
             ], startPoint: .top, endPoint: .bottom)
         }
         
     }
     private var content: some View{
-        VStack(alignment: .leading, spacing: 50.0){
-            
-            Text("Explore the Best Places in Phu Quoc: Unveiling the Island's Hidden Gems!")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .foregroundColor(Color.white)
-            
-            Button(action: {
-                // Handle image tap action here
-                isSheetPresented = true
-                print("Image tapped!")
-            }) {
-                Text("Start")
-                    .font(.title3)
+        VStack{
+            VStack(alignment: .leading, spacing: 50.0){
+                Text("Explore the Best Places in Phu Quoc: Unveiling the Island's Hidden Gems!")
+                    .font(.largeTitle)
                     .fontWeight(.bold)
-                    //.textCase(.uppercase)
-                    .frame(maxWidth: .infinity)
-                    .foregroundColor(.black)
-                    .padding(30)
-                    .background(.white)
-                    .mask(RoundedRectangle(cornerRadius: 15, style: .continuous))
-                    .overlay(RoundedRectangle(cornerRadius: 15, style: .continuous).stroke(lineWidth: 0.5).fill(.white.opacity(0.5)))
-                    
-                
+                    .foregroundColor(Color.white)
+                RoundedButton(
+                    text: "Start"
+                ) {
+                    isSheetPresented = true
+                }
                 
             }
         }

@@ -11,8 +11,8 @@ struct CardView: View {
     
     let listing: Listing
     let navigation = NavigationManager()
+    let width: CGFloat
     
-    private let width = UIScreen.main.bounds.width
     private let height = UIScreen.main.bounds.height
     
     @State private var isSheetPresented = false
@@ -22,12 +22,12 @@ struct CardView: View {
             background
             content
         }
-        .frame(height: 280.0)
+        .frame(width: width, height: 280.0)
         .overlay(alignment: .topTrailing){
             Image("Heart_01")
                 .resizable()
                 .renderingMode(.template)
-                .foregroundColor(Color("primaryYellow"))
+                .foregroundColor(Color("PrimaryYellow"))
                 .frame(width: 20, height: 20)
                 .mask(Circle())
                 .padding(10)
@@ -51,7 +51,7 @@ struct CardView: View {
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
         let listing = Listing(id: 1, rating: Rating(base: 4, rating: 4, count: 5, countText: "3"), address: "Adress", latitude: 40.7, longitude: -73.87, url: "https://phuquoc.guru", title: "City Street Coffee", content: "Test content", excerpt: "Test excerpt", price: 300, thumbnail: "https://picsum.photos/800", photos: [Photos(title: "", src: "https://picsum.photos/800"),Photos(title: "", src: "https://picsum.photos/800"),Photos(title: "", src: "https://picsum.photos/800")], distance: "1", distanceWithUnit: "3", isFeatured: true, authorID: "4", authorName: "Alex", viewCount: 123)
-        CardView(listing: listing)
+        CardView(listing: listing, width: UIScreen.main.bounds.width)
     }
 }
 
@@ -99,7 +99,7 @@ extension CardView{
                         {
                             Circle()
                                 .frame(width: 15)
-                                .foregroundColor(Color("primaryYellow").opacity(0.5))
+                                .foregroundColor(Color("PrimaryYellow").opacity(0.5))
                                 .offset(x: 2, y: 3)
                         }
                 }
@@ -126,7 +126,7 @@ extension CardView{
                 Image("Star_Fill")
                 .resizable()
                 .renderingMode(.template)
-                .foregroundColor(Color("primaryYellow"))
+                .foregroundColor(Color("PrimaryYellow"))
                 .frame(width: 15, height: 15)
                 Text(String(format: "%.1f", listing.rating.rating))
                     .font(.system(size: 14))

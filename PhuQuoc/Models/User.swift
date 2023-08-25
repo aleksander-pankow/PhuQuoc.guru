@@ -7,9 +7,13 @@
 
 import Foundation
 
-struct User{
-    let id: Int
+struct User:Codable{
     let name: String
-    let avatar: String
-    let email: String
+    let birth: Date?
+    let coupons: [String]?
+    let favorite: [String]?
+    let gender: String?
+    let photo: String?
+    let phone: String?
+    let visits: [String]?
 }

@@ -1,5 +1,5 @@
 //
-//  ProfileView.swift
+//  UserView.swift
 //  PhuQuoc
 //
 //  Created by Aleksander Pankow on 10/06/2023.
@@ -8,9 +8,9 @@
 import SwiftUI
 import FirebaseAuth
 
-struct ProfileView: View {
+struct UserView: View {
     
-    @StateObject private var authViewModel = AuthViewModel()
+    @StateObject var uvm = UserViewModel()
     
     var body: some View {
         VStack{
@@ -18,21 +18,25 @@ struct ProfileView: View {
             Spacer()
             menu
             Spacer()
-        }.padding(.horizontal, 50)
+        }
+        .padding(.horizontal, 50)
+        .onAppear(){
+            //userViewModel.fetchCurrentUserInfo()
+        }
     }
 }
 
-struct ProfileView_Previews: PreviewProvider {
+struct UserView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
+        UserView()
     }
 }
 
 //MARK: - VIEW COMPONENTS
 
-extension ProfileView {
-    private var header: some View{
-        Group{
+extension UserView {
+    private var header: some View {
+        VStack{
             AsyncImage(url: URL(string: "https://picsum.photos/300")) { phase in
                 if let image = phase.image {
                     image // Displays the loaded image.
@@ -46,20 +50,22 @@ extension ProfileView {
             .frame(width: 100, height: 100)
             .mask(Circle())
             
-            Text("Aleksander")
+            Text(uvm.testUser.name)
                 .font(.title2)
                 .fontWeight(.bold)
+                .redacted(reason: uvm.testUser.name.isEmpty ? .placeholder : [])
             
-            Text("testemail@test.com")
-                .font(.body)
-                .fontWeight(.regular)
-                .foregroundColor(Color.gray)
             
-            Text("Edit profile")
-                .padding()
-                .foregroundColor(.white)
-                .background(Color("primaryBlue"))
-                .cornerRadius(15)
+            NavigationLink(destination: UserEditView(
+                displayName: uvm.testUser.name,
+                phoneNumber: uvm.testUser.phone ?? "",
+                birthdate: Date()), label: {
+                Text("Edit profile")
+                    .padding()
+                    .foregroundColor(.white)
+                    .background(Color("PrimaryBlue"))
+                    .cornerRadius(15)
+            })
         }
     }
     private var menu: some View{
@@ -70,12 +76,12 @@ extension ProfileView {
                         HStack(spacing: 20.0){
                             ZStack {
                                 Circle()
-                                    .foregroundColor(Color("primaryBlue").opacity(0.2))
+                                    .foregroundColor(Color("PrimaryBlue").opacity(0.2))
                                 Image(systemName: "gear")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .frame(width: 25, height: 25)
-                                    .foregroundColor(Color("primaryBlue"))
+                                    .foregroundColor(Color("PrimaryBlue"))
                             }
                             .frame(width: 45, height: 45)
                             Text("Settings")
@@ -83,12 +89,12 @@ extension ProfileView {
                         HStack(spacing: 20.0){
                             ZStack {
                                 Circle()
-                                    .foregroundColor(Color("primaryBlue").opacity(0.2))
+                                    .foregroundColor(Color("PrimaryBlue").opacity(0.2))
                                 Image(systemName: "heart")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .frame(width: 25, height: 25)
-                                    .foregroundColor(Color("primaryBlue"))
+                                    .foregroundColor(Color("PrimaryBlue"))
                             }
                             .frame(width: 45, height: 45)
                             Text("Favourite List")
@@ -96,12 +102,12 @@ extension ProfileView {
                         HStack(spacing: 20.0){
                             ZStack {
                                 Circle()
-                                    .foregroundColor(Color("primaryBlue").opacity(0.2))
+                                    .foregroundColor(Color("PrimaryBlue").opacity(0.2))
                                 Image(systemName: "qrcode")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .frame(width: 25, height: 25)
-                                    .foregroundColor(Color("primaryBlue"))
+                                    .foregroundColor(Color("PrimaryBlue"))
                             }
                             .frame(width: 45, height: 45)
                             Text("My coupons")
@@ -109,12 +115,12 @@ extension ProfileView {
                         HStack(spacing: 20.0){
                             ZStack {
                                 Circle()
-                                    .foregroundColor(Color("primaryBlue").opacity(0.2))
+                                    .foregroundColor(Color("PrimaryBlue").opacity(0.2))
                                 Image(systemName: "megaphone")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .frame(width: 25, height: 25)
-                                    .foregroundColor(Color("primaryBlue"))
+                                    .foregroundColor(Color("PrimaryBlue"))
                             }
                             .frame(width: 45, height: 45)
                             Text("My events")
@@ -125,12 +131,12 @@ extension ProfileView {
                         HStack(spacing: 20.0){
                             ZStack {
                                 Circle()
-                                    .foregroundColor(Color("primaryBlue").opacity(0.2))
+                                    .foregroundColor(Color("PrimaryBlue").opacity(0.2))
                                 Image(systemName: "info")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .frame(width: 20, height: 20)
-                                    .foregroundColor(Color("primaryBlue"))
+                                    .foregroundColor(Color("PrimaryBlue"))
                             }
                             .frame(width: 45, height: 45)
                             Text("Info")
@@ -138,12 +144,12 @@ extension ProfileView {
                         HStack(spacing: 20.0){
                             ZStack {
                                 Circle()
-                                    .foregroundColor(Color("primaryBlue").opacity(0.2))
+                                    .foregroundColor(Color("PrimaryBlue").opacity(0.2))
                                 Image(systemName: "arrow.right.square")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .frame(width: 20, height: 20)
-                                    .foregroundColor(Color("primaryBlue"))
+                                    .foregroundColor(Color("PrimaryBlue"))
                             }
                             .frame(width: 45, height: 45)
                             Text("Logout")

@@ -67,7 +67,7 @@ struct PlaceView: View {
                         Image(listing.isFeatured ? "award" : "")
                             .resizable()
                             .renderingMode(.template)
-                            .foregroundColor(Color("primaryBlue"))
+                            .foregroundColor(Color("PrimaryBlue"))
                             .frame(width: 20.0, height: 20.0)
                     }
                     Text(listing.address)
@@ -131,11 +131,11 @@ struct PlaceView: View {
                             Image("navigation")
                                 .resizable()
                                 .renderingMode(.template)
-                                .foregroundColor(Color("primaryBlue"))
+                                .foregroundColor(Color("PrimaryBlue"))
                                 .frame(width: 20, height: 20)
                             Text("Get Direction")
                                 .fontWeight(.bold)
-                                .foregroundColor(Color("primaryBlue"))
+                                .foregroundColor(Color("PrimaryBlue"))
                         }
                         .padding(15)
                         .background(Blur(style: .systemThickMaterialLight))
@@ -152,7 +152,7 @@ struct PlaceView: View {
                             Image("star")
                                 .resizable()
                                 .renderingMode(.template)
-                                .foregroundColor(Color("primaryBlue"))
+                                .foregroundColor(Color("PrimaryBlue"))
                                 .frame(width: 20, height: 20)
                         }
                         .padding(15)
@@ -165,7 +165,7 @@ struct PlaceView: View {
                             Image("share")
                                 .resizable()
                                 .renderingMode(.template)
-                                .foregroundColor(Color("primaryBlue"))
+                                .foregroundColor(Color("PrimaryBlue"))
                                 .frame(width: 20, height: 20)
                         }
                         .padding(15)
